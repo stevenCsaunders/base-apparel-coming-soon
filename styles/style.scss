@@ -1,0 +1,23 @@
+//VARIABLES
+$desaturated-red: hsl(0, 36%, 70%);
+$soft-red: hsl(0, 93%, 68%);
+$dark-grayish-red: hsl(0, 6%, 24%);
+$light-gradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+$pink-gradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+@mixin main-font($weight) {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: $weight;
+  color: $dark-grayish-red;
+}
+
+body {
+  background: $light-gradient;
+  height: 100vh;
+  width: 100vw;
+}
+
+.hero-desktop {
+  display: none;
+}
