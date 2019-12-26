@@ -2,39 +2,41 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  <title>Base Apparel coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>Base Apparel Coming Soon Page</title>
 </head>
 
 <body>
-
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store.
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
-
+  <header>
+    <div class="logo">
+      <img src="/images/logo.svg" alt="company logo" />
+    </div>
+  </header>
+  <div class="hero">
+    <img src="/images/hero-mobile.jpg" alt="female model" class="hero-mobile" />
+    <img src="/images/hero-desktop.jpg" alt="female model" class="hero-desktop" />
+  </div>
+  <main>
+    <div class="coming-soon">
+      <h1><span class="coming-soon-highlight">We're</span>> coming soon</h1>
+    </div>
+    <section class="body-copy">
+      <p>
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our
+        launch deals.
+      </p>
+      <form>
+        <input type="email" id="email" aria-label="email address" />
+        <label for="email">Email Address</label>
+      </form>
+    </section>
+  </main>
   <footer>
     <p class="attribution">
-      Challenge by Frontend Mentor. <br>
+      Challenge by Frontend Mentor. <br />
       Coded by <a href="#">Steven Saunders</a>.
     </p>
   </footer>
