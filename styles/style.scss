@@ -5,19 +5,69 @@ $dark-grayish-red: hsl(0, 6%, 24%);
 $light-gradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 $pink-gradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 
-@mixin main-font($weight) {
+@mixin mainFont($weight, $size) {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 16px;
+  font-size: $size;
   font-weight: $weight;
   color: $dark-grayish-red;
 }
 
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
 body {
   background: $light-gradient;
-  height: 100vh;
-  width: 100vw;
+  background-size: cover;
+}
+
+header {
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+  .logo img {
+    width: 110px;
+  }
+}
+
+.hero-mobile {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-desktop {
   display: none;
+}
+
+main {
+  padding: 0 3rem;
+  text-align: center;
+  .coming-soon {
+    margin-top: 6rem;
+  }
+  .coming-soon h1 {
+    @include mainFont(600, 10vw);
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+  }
+  .coming-soon-highlight {
+    color: $desaturated-red;
+    font-weight: 300;
+  }
+  .body-copy {
+    @include mainFont(400, 1.4rem);
+    line-height: 2.25rem;
+    color: $desaturated-red;
+    margin: 2.75rem 0;
+  }
+}
+
+footer {
+  text-align: center;
+  color: $desaturated-red;
+  @include mainFont(300, 1rem);
+  margin: 7rem 0 2rem 0;
 }

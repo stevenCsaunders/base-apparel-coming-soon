@@ -1,0 +1,78 @@
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, white, #fff5f5);
+  background-size: cover;
+}
+
+header {
+  height: 12vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 3rem;
+}
+
+header .logo img {
+  width: 110px;
+}
+
+.hero-mobile {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-desktop {
+  display: none;
+}
+
+main {
+  padding: 0 3rem;
+  text-align: center;
+}
+
+main .coming-soon {
+  margin-top: 6rem;
+}
+
+main .coming-soon h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10vw;
+  font-weight: 600;
+  color: #413a3a;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+main .coming-soon-highlight {
+  color: #ce9797;
+  font-weight: 300;
+}
+
+main .body-copy {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #413a3a;
+  line-height: 2.25rem;
+  color: #ce9797;
+  margin: 2.75rem 0;
+}
+
+footer {
+  text-align: center;
+  color: #ce9797;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #413a3a;
+  margin: 7rem 0 2rem 0;
+}
+/*# sourceMappingURL=style.css.map */
