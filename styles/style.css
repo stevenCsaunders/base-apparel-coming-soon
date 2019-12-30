@@ -52,15 +52,15 @@ main .coming-soon-highlight {
 
 main .body-copy {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 3.25vw;
+  font-weight: 300;
   color: #413a3a;
-  line-height: 2.25rem;
+  line-height: 4.5vw;
   color: #ce9797;
   margin: 2.75rem 0;
 }
 
-main .email-form form {
+main .email-form .form-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,50 +71,68 @@ main .email-form form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
-main .email-form input {
+main .email-form .form-wrapper .email-reject {
+  position: absolute;
+  right: 0;
+  margin-right: 11rem;
+}
+
+main .email-form .form-wrapper input {
   height: 4rem;
   width: 100%;
-  border: 1px solid #ce9797;
+  border: 1px solid #f96262;
   border-radius: 2rem;
   padding-left: 1.5rem;
 }
 
-main .email-form input::-webkit-input-placeholder {
+main .email-form .form-wrapper input::-webkit-input-placeholder {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.25rem;
+  font-size: 2vw;
   font-weight: 300;
   color: #413a3a;
   color: #ce9797;
 }
 
-main .email-form input:-ms-input-placeholder {
+main .email-form .form-wrapper input:-ms-input-placeholder {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.25rem;
+  font-size: 2vw;
   font-weight: 300;
   color: #413a3a;
   color: #ce9797;
 }
 
-main .email-form input::-ms-input-placeholder {
+main .email-form .form-wrapper input::-ms-input-placeholder {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.25rem;
+  font-size: 2vw;
   font-weight: 300;
   color: #413a3a;
   color: #ce9797;
 }
 
-main .email-form input::placeholder {
+main .email-form .form-wrapper input::placeholder {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.25rem;
+  font-size: 2vw;
   font-weight: 300;
   color: #413a3a;
   color: #ce9797;
 }
 
-main .email-form label {
+main .email-form .form-wrapper label {
   display: none;
+}
+
+main .email-form .email-validate {
+  margin-top: 1rem;
+  text-align: left;
+  padding-left: 1.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #413a3a;
+  color: #f96262;
 }
 
 main button {
@@ -125,10 +143,6 @@ main button {
   min-width: 10rem;
   margin-left: -4rem;
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 2rem;
-  font-weight: 300;
-  color: #413a3a;
   color: white;
   -webkit-box-shadow: -1px 4px 9px 3px rgba(249, 98, 98, 0.2);
           box-shadow: -1px 4px 9px 3px rgba(249, 98, 98, 0.2);
@@ -143,11 +157,18 @@ main button:hover {
           box-shadow: -1px 4px 9px 3px rgba(29, 7, 7, 0.3);
 }
 
+@media all and (max-width: 374px) {
+  main button {
+    min-width: 2rem;
+  }
+}
+
 footer {
   text-align: center;
+  line-height: 3vw;
   color: #ce9797;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 2vw;
   font-weight: 300;
   color: #413a3a;
   height: 12vh;

@@ -1,10 +1,17 @@
-//VARIABLES
+//COLOR VARIABLES
 $desaturated-red: hsl(0, 36%, 70%);
 $soft-red: hsl(0, 93%, 68%);
 $soft-red-transparent: hsla(0, 93%, 68%, 0.2);
 $dark-grayish-red: hsl(0, 6%, 24%);
 $light-gradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 $pink-gradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+//QUERY VAFRIABLES
+$breakpoint-large: 1440px;
+$breakpoint-medium: 1024px;
+$breakpoint-small: 750px;
+$breakpoint-xsmall: 375px;
+$breakpoint-xxsmall: 250px;
 
 @mixin mainFont($weight, $size) {
   font-family: 'Josefin Sans', sans-serif;
@@ -53,30 +60,43 @@ main {
     font-weight: 300;
   }
   .body-copy {
-    @include mainFont(400, 1.4rem);
-    line-height: 2.25rem;
+    @include mainFont(300, 3.25vw);
+    line-height: 4.5vw;
     color: $desaturated-red;
     margin: 2.75rem 0;
   }
   .email-form {
-    form {
+    .form-wrapper {
       display: flex;
       flex-direction: row;
       align-items: center;
-    }
-    input {
-      height: 4rem;
-      width: 100%;
-      border: 1px solid $desaturated-red;
-      border-radius: 2rem;
-      padding-left: 1.5rem;
-      &::placeholder {
-        @include mainFont(300, 1.25rem);
-        color: $desaturated-red;
+      position: relative;
+      .email-reject {
+        position: absolute;
+        right: 0;
+        margin-right: 11rem;
+      }
+      input {
+        height: 4rem;
+        width: 100%;
+        border: 1px solid $soft-red;
+        border-radius: 2rem;
+        padding-left: 1.5rem;
+        &::placeholder {
+          @include mainFont(300, 2vw);
+          color: $desaturated-red;
+        }
+      }
+      label {
+        display: none;
       }
     }
-    label {
-      display: none;
+    .email-validate {
+      margin-top: 1rem;
+      text-align: left;
+      padding-left: 1.5rem;
+      @include mainFont(300, 1.5rem);
+      color: $soft-red;
     }
   }
   button {
@@ -87,7 +107,6 @@ main {
     min-width: 10rem;
     margin-left: -4rem;
     background: $pink-gradient;
-    @include mainFont(300, 2rem);
     color: white;
     box-shadow: -1px 4px 9px 3px $soft-red-transparent;
     cursor: pointer;
@@ -96,13 +115,17 @@ main {
     &:hover {
       box-shadow: -1px 4px 9px 3px hsla(0, 61%, 7%, 0.3);
     }
+    @media all and (max-width: $breakpoint-xsmall - 1) {
+      min-width: 2rem;
+    }
   }
 }
 
 footer {
   text-align: center;
+  line-height: 3vw;
   color: $desaturated-red;
-  @include mainFont(300, 1rem);
+  @include mainFont(300, 2vw);
   height: 12vh;
   margin-top: 4rem;
   color: hsl(0, 0%, 82%);
