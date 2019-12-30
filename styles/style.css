@@ -1,11 +1,5 @@
-html {
-  font-size: 62.5%;
-  height: 100%;
-}
-
 body {
   background: linear-gradient(135deg, white, #fff5f5);
-  background-size: cover;
 }
 
 header {
@@ -34,7 +28,7 @@ header .logo img {
 }
 
 main {
-  padding: 0 3rem;
+  padding: 0 10%;
   text-align: center;
 }
 
@@ -128,8 +122,8 @@ main button {
   border-radius: 2rem;
   border: none;
   padding: 1rem 2rem;
-  width: 20%;
-  margin-left: -6rem;
+  min-width: 10rem;
+  margin-left: -4rem;
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2rem;
@@ -138,6 +132,15 @@ main button {
   color: white;
   -webkit-box-shadow: -1px 4px 9px 3px rgba(249, 98, 98, 0.2);
           box-shadow: -1px 4px 9px 3px rgba(249, 98, 98, 0.2);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+main button:hover {
+  -webkit-box-shadow: -1px 4px 9px 3px rgba(29, 7, 7, 0.3);
+          box-shadow: -1px 4px 9px 3px rgba(29, 7, 7, 0.3);
 }
 
 footer {
@@ -147,7 +150,18 @@ footer {
   font-size: 1rem;
   font-weight: 300;
   color: #413a3a;
-  padding-top: 4rem;
+  height: 12vh;
+  margin-top: 4rem;
   color: #d1d1d1;
+}
+
+footer .attribution a {
+  color: #d1d1d1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer .attribution a:hover {
+  color: #f96262;
 }
 /*# sourceMappingURL=style.css.map */
