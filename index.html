@@ -36,14 +36,16 @@
       </p>
     </div>
     <div class="email-form">
-      <form>
+      <form id="form" novalidate>
         <div class="form-wrapper">
-          <input type="email" id="email" aria-label="email address" placeholder="Email Address" />
+          <input type="email" id="email" aria-label="email address" placeholder="Email Address" class="email border" />
           <label for="email" id="email-label">Email Address</label>
-          <img class="email-reject" src="./images/icon-error.svg">
-          <button type="button"><img src="/images/icon-arrow.svg" /></button>
+          <img class="email-reject hidden" src="./images/icon-error.svg">
+          <button type="submit">
+            <img src="/images/icon-arrow.svg" />
+          </button>
         </div>
-        <div class="email-validate">
+        <div id="email-validate" class="email-validate hidden">
           <small> Please use a valid email address</small>
         </div>
       </form>
@@ -55,6 +57,7 @@
       Coded by <a class="link" href="https://www.thestevesaunders.com">Steven Saunders</a>.
     </p>
   </footer>
+  <script src="./app.js"></script>
 </body>
 
 </html>

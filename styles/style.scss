@@ -71,53 +71,47 @@ main {
       flex-direction: row;
       align-items: center;
       position: relative;
-      .email-reject {
-        position: absolute;
-        right: 0;
-        margin-right: 11rem;
-      }
-      input {
-        height: 4rem;
-        width: 100%;
-        border: 1px solid $soft-red;
-        border-radius: 2rem;
-        padding-left: 1.5rem;
-        &::placeholder {
-          @include mainFont(300, 2vw);
-          color: $desaturated-red;
-        }
-      }
-      label {
-        display: none;
+    }
+    .email {
+      height: 4rem;
+      width: 100%;
+      border-radius: 2rem;
+      padding-left: 1.5rem;
+      outline: none;
+      @include mainFont(300, 2vw);
+      &::placeholder {
+        color: $desaturated-red;
       }
     }
-    .email-validate {
-      margin-top: 1rem;
-      text-align: left;
-      padding-left: 1.5rem;
-      @include mainFont(300, 1.5rem);
-      color: $soft-red;
+    .border {
+      border: 1px solid $desaturated-red;
+    }
+    .red-border {
+      border: 1px solid $soft-red;
+    }
+    label {
+      display: none;
     }
   }
-  button {
-    height: 4.4rem;
-    border-radius: 2rem;
-    border: none;
-    padding: 1rem 2rem;
-    min-width: 10rem;
-    margin-left: -4rem;
-    background: $pink-gradient;
-    color: white;
-    box-shadow: -1px 4px 9px 3px $soft-red-transparent;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.4s;
-    &:hover {
-      box-shadow: -1px 4px 9px 3px hsla(0, 61%, 7%, 0.3);
-    }
-    @media all and (max-width: $breakpoint-xsmall - 1) {
-      min-width: 2rem;
-    }
+}
+button {
+  height: 4.4rem;
+  border-radius: 2rem;
+  border: none;
+  padding: 1rem 2rem;
+  min-width: 10rem;
+  margin-left: -4rem;
+  background: $pink-gradient;
+  color: white;
+  box-shadow: -1px 4px 9px 3px $soft-red-transparent;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.4s;
+  &:hover {
+    box-shadow: -1px 4px 9px 3px hsla(0, 61%, 7%, 0.3);
+  }
+  @media all and (max-width: $breakpoint-xsmall - 1) {
+    min-width: 2rem;
   }
 }
 
@@ -137,4 +131,23 @@ footer {
       color: $soft-red;
     }
   }
+}
+
+//EMAIL VALIDATION STYLES
+.hidden {
+  visibility: hidden;
+}
+
+.email-validate {
+  margin-top: 1rem;
+  text-align: left;
+  padding-left: 1.5rem;
+  @include mainFont(300, 1.5rem);
+  color: $soft-red;
+}
+
+.email-reject {
+  position: absolute;
+  right: 0;
+  margin-right: 11rem;
 }
