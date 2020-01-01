@@ -75,6 +75,8 @@ main .email-form .form-wrapper {
 }
 
 main .email-form .email {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   height: 4rem;
   width: 100%;
   border-radius: 2rem;
@@ -100,6 +102,18 @@ main .email-form .email::-ms-input-placeholder {
 
 main .email-form .email::placeholder {
   color: #ce9797;
+}
+
+main .email-form .border {
+  border: 1px solid #ce9797;
+}
+
+main .email-form .red-border {
+  border: 1px solid #f96262;
+}
+
+main .email-form .green-border {
+  border: 1px solid lightgreen;
 }
 
 main .email-form label {
@@ -157,10 +171,6 @@ footer .attribution a:hover {
   color: #f96262;
 }
 
-.border {
-  border: 1px solid #ce9797;
-}
-
 .hidden {
   visibility: hidden;
 }
@@ -174,15 +184,12 @@ footer .attribution a:hover {
   font-weight: 300;
   color: #413a3a;
   color: #f96262;
+  opacity: 1;
 }
 
 .email-reject {
   position: absolute;
   right: 0;
   margin-right: 11rem;
-}
-
-main .email-form form .form-wrapper input .error-border {
-  border-color: #f96262;
 }
 /*# sourceMappingURL=style.css.map */

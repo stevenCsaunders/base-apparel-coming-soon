@@ -1,8 +1,9 @@
 const form = document.querySelector(`form`);
 const emailInput = document.querySelector(`input`);
 const errorMessage = document.querySelector(`#email-validate`);
+const errorImg = document.querySelector(`#email-reject`);
 
-form.addEventListener(`submit`, (e) => {
+form.addEventListener(`input`, (e) => {
 	e.preventDefault();
 	checkEmail();
 })
@@ -10,8 +11,10 @@ form.addEventListener(`submit`, (e) => {
 //CHECK EMAIL AGAINST INVALID INPUTS
 function checkEmail() {
 	const emailValue = emailInput.value.trim();
-	if(emailValue === '' || emailValue !== validateEmail(emailValue)) {
+	if(emailValue === '' || !validateEmail(emailValue)) {
 		setErrorFor();
+	}else if(validateEmail(emailValue)) {
+		setSuccess();
 	}
 }
 
@@ -22,7 +25,16 @@ function validateEmail(email) {
 }
 
 //SETTING THE CLASSES TO SHOW ERROR
-function setErrorFor() {
-	emailInput.classList.add(`error-border`);
+function setErrorFor(e) {
+	emailInput.classList.add(`red-border`);
+	emailInput.classList.remove(`green-border`);
 	errorMessage.classList.remove(`hidden`);
+	errorImg.classList.remove(`hidden`);
+}
+
+function setSuccess() {
+	emailInput.classList.remove(`red-border`);
+	emailInput.classList.add(`green-border`);
+	errorMessage.classList.add(`hidden`);
+	errorImg.classList.add(`hidden`);
 }
