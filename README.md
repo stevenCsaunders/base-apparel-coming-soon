@@ -1,6 +1,6 @@
 # Frontend Mentor - Base Apparel coming soon page w/client side JS validation.
 
-![Design preview for the Base Apparel coming soon page coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Base Apparel coming soon page coding challenge](/design/desktop-design.jpg)
 
 ## The challenge
 
