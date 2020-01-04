@@ -1,17 +1,5 @@
-//COLOR VARIABLES
-$desaturated-red: hsl(0, 36%, 70%);
-$soft-red: hsl(0, 93%, 68%);
-$soft-red-transparent: hsla(0, 93%, 68%, 0.2);
-$dark-grayish-red: hsl(0, 6%, 24%);
-$light-gradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-$pink-gradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-
-//QUERY VAFRIABLES
-$breakpoint-large: 1440px;
-$breakpoint-medium: 1024px;
-$breakpoint-small: 750px;
-$breakpoint-xsmall: 375px;
-$breakpoint-xxsmall: 250px;
+@import './variables';
+@import './normalize.css';
 
 @mixin mainFont($weight, $size) {
   font-family: 'Josefin Sans', sans-serif;
@@ -20,139 +8,69 @@ $breakpoint-xxsmall: 250px;
   color: $dark-grayish-red;
 }
 
-body {
+.wrapper {
   background: $light-gradient;
+  background-size: cover;
+  background-position: bottom;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'header'
+    'hero'
+    'main'
+    'footer';
 }
 
 header {
-  height: 12vh;
-  display: flex;
+  grid-area: header;
+  display: grid;
   align-items: center;
-  padding: 0 3rem;
-  .logo img {
-    width: 110px;
+  height: 17vw;
+  max-height: 100px;
+  .logo {
+    padding-left: 3rem;
+    img {
+      width: 25vw;
+      max-width: 150px;
+    }
   }
 }
 
-.hero-mobile {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.hero-desktop {
-  display: none;
+.hero {
+  grid-area: hero;
+  .hero-desktop {
+    display: none;
+  }
+  .hero-mobile {
+    width: 100vw;
+  }
 }
 
 main {
-  padding: 0 10%;
+  grid-area: main;
   text-align: center;
+  padding: 0 3rem;
   .coming-soon {
-    margin-top: 6rem;
-  }
-  .coming-soon h1 {
-    @include mainFont(600, 10vw);
+    padding: 6rem 0 0 0;
+    color: $dark-grayish-red;
+    @include mainFont(400, 2.25rem);
     text-transform: uppercase;
     letter-spacing: 1rem;
-  }
-  .coming-soon-highlight {
-    color: $desaturated-red;
-    font-weight: 300;
+    .coming-soon-highlight {
+      font-weight: 300;
+      color: $desaturated-red;
+    }
   }
   .body-copy {
-    @include mainFont(300, 3.25vw);
-    line-height: 4.5vw;
+    @include mainFont(400, 1.5rem);
     color: $desaturated-red;
-    margin: 2.75rem 0;
+    line-height: 6vw;
   }
   .email-form {
-    .form-wrapper {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      position: relative;
-    }
-    .email {
-      transition: all 0.4s;
-      height: 4rem;
-      width: 100%;
-      border-radius: 2rem;
-      padding-left: 1.5rem;
-      outline: none;
-      @include mainFont(300, 2vw);
-      &::placeholder {
-        color: $desaturated-red;
-      }
-    }
-    .border {
-      border: 1px solid $desaturated-red;
-    }
-    .red-border {
-      border: 1px solid $soft-red;
-    }
-    .green-border {
-      border: 1px solid lightgreen;
-    }
-    label {
-      display: none;
-    }
-  }
-}
-button {
-  height: 4.4rem;
-  border-radius: 2rem;
-  border: none;
-  padding: 1rem 2rem;
-  min-width: 10rem;
-  margin-left: -4rem;
-  background: $pink-gradient;
-  color: white;
-  box-shadow: -1px 4px 9px 3px $soft-red-transparent;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.4s;
-  &:hover {
-    box-shadow: -1px 4px 9px 3px hsla(0, 61%, 7%, 0.3);
-  }
-  @media all and (max-width: $breakpoint-xsmall - 1) {
-    min-width: 2rem;
   }
 }
 
 footer {
+  grid-area: footer;
   text-align: center;
-  line-height: 3vw;
-  color: $desaturated-red;
-  @include mainFont(300, 2vw);
-  height: 12vh;
-  margin-top: 4rem;
-  color: hsl(0, 0%, 82%);
-  .attribution a {
-    color: hsl(0, 0%, 82%);
-    text-decoration: none;
-    cursor: pointer;
-    &:hover {
-      color: $soft-red;
-    }
-  }
-}
-
-//EMAIL VALIDATION STYLES
-.hidden {
-  visibility: hidden;
-}
-
-.email-validate {
-  margin-top: 1rem;
-  text-align: left;
-  padding-left: 1.5rem;
-  @include mainFont(300, 1.5rem);
-  color: $soft-red;
-  opacity: 1;
-}
-
-.email-reject {
-  position: absolute;
-  right: 0;
-  margin-right: 11rem;
 }
