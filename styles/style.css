@@ -1,8 +1,10 @@
-@import url(/Users/stevensaunders/Desktop/HTML-CSS/base-apparel-coming-soon/styles/normalize.css);
+body {
+  height: 100%;
+}
+
 .wrapper {
   background: linear-gradient(135deg, white, #ffebeb);
   background-size: cover;
-  background-position: bottom;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -50,8 +52,10 @@ main {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: main;
+  margin: 0 auto;
   text-align: center;
   padding: 0 3rem;
+  max-width: 600px;
 }
 
 main .coming-soon {
@@ -76,10 +80,109 @@ main .body-copy {
   font-weight: 400;
   color: #413a3a;
   color: #ce9797;
-  line-height: 6vw;
+  line-height: 2rem;
 }
 
-footer {
+main .email-form form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+main .email-form form input {
+  border: 1px solid #ce9797;
+  border-radius: 2rem;
+  padding: 1.5rem 1rem 1.5rem 2.5rem;
+  width: 100%;
+}
+
+main .email-form form input::-webkit-input-placeholder {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #413a3a;
+  color: #ce9797;
+}
+
+main .email-form form input:-ms-input-placeholder {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #413a3a;
+  color: #ce9797;
+}
+
+main .email-form form input::-ms-input-placeholder {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #413a3a;
+  color: #ce9797;
+}
+
+main .email-form form input::placeholder {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #413a3a;
+  color: #ce9797;
+}
+
+main .email-form form label {
+  display: none;
+}
+
+main .email-form form button {
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  border-radius: 2rem;
+  padding: 1.4rem 0;
+  width: 7rem;
+  border: none;
+  -webkit-box-shadow: 0px 0.75rem 0.95rem rgba(249, 98, 98, 0.2);
+          box-shadow: 0px 0.75rem 0.95rem rgba(249, 98, 98, 0.2);
+}
+
+main .email-form form button:hover {
+  -webkit-box-shadow: 0px 0.75rem 0.95rem rgba(65, 58, 58, 0.2);
+          box-shadow: 0px 0.75rem 0.95rem rgba(65, 58, 58, 0.2);
+  cursor: pointer;
+}
+
+main .email-form form button img {
+  max-height: 1.5rem;
+}
+
+main .email-form form .email-reject-img {
+  position: absolute;
+  right: 7.5rem;
+}
+
+main .email-form form .hidden {
+  display: none;
+}
+
+main .email-form .email-reject-text p {
+  text-align: left;
+  margin-left: 2.5rem;
+}
+
+main footer {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: footer;

@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-  <link href="/styles/normalize.css" rel="stylesheet" />
+  <link href="./styles/reset.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet" />
-  <link href="/styles/style.css" rel="stylesheet" />
+  <link href="./styles/style.css" rel="stylesheet" />
   <title>Base Apparel Coming Soon Page</title>
 </head>
 
@@ -38,19 +38,19 @@
       </div>
       <div class="email-form">
         <form id="form" novalidate>
-          <div class="form-wrapper">
-            <input type="email" id="email" aria-label="email address" placeholder="Email Address"
-              class="email border" />
-            <label for="email" id="email-label">Email Address</label>
-            <img id="email-reject" class="email-reject hidden" src="./images/icon-error.svg">
-            <button type="submit">
-              <img src="/images/icon-arrow.svg" />
-            </button>
-          </div>
-          <div id="email-validate" class="email-validate hidden">
-            <small> Please use a valid email address</small>
+          <input type="email" id="email" aria-label="email address" placeholder="Email Address" class="email border" />
+          <label for="email" id="email-label">Email Address</label>
+          <button type="submit">
+            <img src="/images/icon-arrow.svg" />
+          </button>
+          <div id="email-reject" class="email-reject-img hidden">
+            <img src="./images/icon-error.svg">
           </div>
         </form>
+        <div id="email-validate" class="email-reject-text hidden">
+          <p> Please use a valid email address</p>
+        </div>
+
       </div>
     </main>
     <footer>

@@ -1,5 +1,4 @@
 @import './variables';
-@import './normalize.css';
 
 @mixin mainFont($weight, $size) {
   font-family: 'Josefin Sans', sans-serif;
@@ -7,11 +6,12 @@
   font-weight: $weight;
   color: $dark-grayish-red;
 }
-
+body {
+  height: 100%;
+}
 .wrapper {
   background: $light-gradient;
   background-size: cover;
-  background-position: bottom;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -48,8 +48,10 @@ header {
 
 main {
   grid-area: main;
+  margin: 0 auto;
   text-align: center;
   padding: 0 3rem;
+  max-width: 600px;
   .coming-soon {
     padding: 6rem 0 0 0;
     color: $dark-grayish-red;
@@ -64,13 +66,66 @@ main {
   .body-copy {
     @include mainFont(400, 1.5rem);
     color: $desaturated-red;
-    line-height: 6vw;
+    line-height: 2rem;
   }
   .email-form {
-  }
-}
+    form {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      input {
+        border: 1px solid $desaturated-red;
+        border-radius: 2rem;
+        padding: 1.5rem 1rem 1.5rem 2.5rem;
+        width: 100%;
+        &::placeholder {
+          @include mainFont(300, 1.5rem);
+          color: $desaturated-red;
+        }
+      }
+      label {
+        display: none;
+      }
 
-footer {
-  grid-area: footer;
-  text-align: center;
+      button {
+        position: absolute;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $dark-gradient;
+        border-radius: 2rem;
+        padding: 1.4rem 0;
+        width: 7rem;
+        border: none;
+        box-shadow: 0px 0.75rem 0.95rem $soft-red-transparent;
+        &:hover {
+          box-shadow: 0px 0.75rem 0.95rem $dark-grayish-transparent;
+          cursor: pointer;
+        }
+        img {
+          max-height: 1.5rem;
+        }
+      }
+
+      .email-reject-img {
+        position: absolute;
+        right: 7.5rem;
+      }
+
+      .hidden {
+        display: none;
+      }
+    }
+    .email-reject-text p {
+      text-align: left;
+      margin-left: 2.5rem;
+    }
+  }
+
+  footer {
+    grid-area: footer;
+    text-align: center;
+  }
 }
