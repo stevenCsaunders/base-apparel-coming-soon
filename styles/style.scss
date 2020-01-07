@@ -77,9 +77,11 @@ body {
         display: flex;
         align-items: center;
         input {
+          @include mainFont(300, 1.5rem);
+          color: $desaturated-red;
           transition: all 0.5s;
           border: 1px solid $desaturated-red;
-          border-radius: 2rem;
+          border-radius: 2.5rem;
           padding: 1.5rem 1rem 1.5rem 2.5rem;
           width: 100%;
           &::placeholder {
@@ -99,9 +101,9 @@ body {
           justify-content: center;
           align-items: center;
           background: $dark-gradient;
-          border-radius: 2rem;
+          border-radius: 2.5rem;
           padding: 1.4rem 0;
-          width: 7rem;
+          width: 9rem;
           border: none;
           box-shadow: 0px 0.75rem 0.95rem $soft-red-transparent;
           &:hover {
@@ -109,7 +111,7 @@ body {
             cursor: pointer;
           }
           img {
-            max-height: 1.5rem;
+            max-height: 1.9rem;
           }
         }
 
@@ -159,6 +161,7 @@ body {
 
 @media all and (min-width: $breakpoint-medium) {
   .wrapper {
+    overflow: hidden;
     display: grid;
     background: url(/images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
