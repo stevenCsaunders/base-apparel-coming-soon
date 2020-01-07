@@ -1,7 +1,5 @@
 body {
-  height: 100%;
   background: linear-gradient(135deg, white, #ffebeb);
-  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -183,7 +181,7 @@ body {
 
 .wrapper main .email-form form .email-reject-img {
   position: absolute;
-  right: 10.5rem;
+  right: 12.5rem;
 }
 
 .wrapper main .email-form .email-reject-text p {

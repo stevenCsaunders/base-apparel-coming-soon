@@ -8,9 +8,7 @@
 }
 
 body {
-  height: 100%;
   background: $light-gradient;
-  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -117,7 +115,7 @@ body {
 
         .email-reject-img {
           position: absolute;
-          right: 10.5rem;
+          right: 12.5rem;
         }
       }
       .email-reject-text p {
