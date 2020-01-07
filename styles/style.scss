@@ -6,140 +6,227 @@
   font-weight: $weight;
   color: $dark-grayish-red;
 }
+
 body {
   height: 100%;
-}
-.wrapper {
   background: $light-gradient;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
   display: grid;
-  grid-template-columns: 1fr;
+  height: 100%;
   grid-template-areas:
     'header'
     'hero'
     'main'
     'footer';
-}
 
-header {
-  grid-area: header;
-  display: grid;
-  align-items: center;
-  height: 17vw;
-  max-height: 100px;
-  .logo {
-    padding-left: 3rem;
-    img {
-      width: 25vw;
-      max-width: 150px;
+  header {
+    grid-area: header;
+    display: grid;
+    align-items: center;
+    height: 14vw;
+    max-height: 100px;
+    .logo {
+      padding-left: 3rem;
+      img {
+        width: 25vw;
+        max-width: 150px;
+      }
     }
   }
-}
 
-.hero {
-  grid-area: hero;
-  .hero-desktop {
-    display: none;
+  .hero {
+    grid-area: hero;
+    .hero-desktop {
+      display: none;
+    }
+    .hero-mobile {
+      width: 100%;
+    }
   }
-  .hero-mobile {
-    width: 100vw;
-  }
-}
 
-main {
-  grid-area: main;
-  margin: 0 auto;
-  text-align: center;
-  padding: 0 3rem;
-  max-width: 600px;
-  .coming-soon {
-    padding: 6rem 0 0 0;
-    color: $dark-grayish-red;
-    @include mainFont(400, 2.25rem);
-    text-transform: uppercase;
-    letter-spacing: 1rem;
-    .coming-soon-highlight {
-      font-weight: 300;
+  main {
+    grid-area: main;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 4rem;
+    .coming-soon {
+      padding: 6rem 0 0 0;
+      color: $dark-grayish-red;
+      @include mainFont(400, 2.25rem);
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      .coming-soon-highlight {
+        font-weight: 300;
+        color: $desaturated-red;
+      }
+    }
+    .body-copy {
+      @include mainFont(400, 1.5rem);
       color: $desaturated-red;
+      line-height: 2.25rem;
     }
-  }
-  .body-copy {
-    @include mainFont(400, 1.5rem);
-    color: $desaturated-red;
-    line-height: 2rem;
-  }
-  .email-form {
-    form {
-      position: relative;
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-      input {
-        transition: all 0.5s;
-        border: 1px solid $desaturated-red;
-        border-radius: 2rem;
-        padding: 1.5rem 1rem 1.5rem 2.5rem;
-        width: 100%;
-        &::placeholder {
-          @include mainFont(300, 1.5rem);
-          color: $desaturated-red;
-        }
-      }
-      label {
-        display: none;
-      }
+    .email-form {
+      margin: 3rem 0;
 
-      button {
-        position: absolute;
-        right: 0;
+      form {
+        position: relative;
         display: flex;
-        justify-content: center;
         align-items: center;
-        background: $dark-gradient;
-        border-radius: 2rem;
-        padding: 1.4rem 0;
-        width: 7rem;
-        border: none;
-        box-shadow: 0px 0.75rem 0.95rem $soft-red-transparent;
-        &:hover {
-          box-shadow: 0px 0.75rem 0.95rem $dark-grayish-transparent;
-          cursor: pointer;
+        input {
+          transition: all 0.5s;
+          border: 1px solid $desaturated-red;
+          border-radius: 2rem;
+          padding: 1.5rem 1rem 1.5rem 2.5rem;
+          width: 100%;
+          &::placeholder {
+            @include mainFont(300, 1.5rem);
+            color: $desaturated-red;
+          }
         }
-        img {
-          max-height: 1.5rem;
+        label {
+          display: none;
+        }
+
+        button {
+          transition: box-shadow 0.5s;
+          position: absolute;
+          right: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $dark-gradient;
+          border-radius: 2rem;
+          padding: 1.4rem 0;
+          width: 7rem;
+          border: none;
+          box-shadow: 0px 0.75rem 0.95rem $soft-red-transparent;
+          &:hover {
+            box-shadow: 0px 0.75rem 0.95rem $dark-grayish-transparent;
+            cursor: pointer;
+          }
+          img {
+            max-height: 1.5rem;
+          }
+        }
+
+        .email-reject-img {
+          position: absolute;
+          right: 7.5rem;
         }
       }
-
-      .email-reject-img {
-        position: absolute;
-        right: 7.5rem;
+      .email-reject-text p {
+        @include mainFont(300, 1.25rem);
+        text-align: left;
+        margin-left: 2.5rem;
+        color: $soft-red;
       }
-    }
-    .email-reject-text p {
-      @include mainFont(300, 1.25rem);
-      text-align: left;
-      margin-left: 2.5rem;
-      color: $soft-red;
-    }
 
-    .red-border {
-      border-color: $soft-red;
-    }
+      .red-border {
+        border-color: $soft-red;
+      }
 
-    .green-border {
-      border-color: lightgreen;
+      .green-border {
+        border-color: lightgreen;
+      }
     }
   }
-}
 
-footer {
-  grid-area: footer;
-  text-align: center;
-  @include mainFont(300, 1.25rem);
-  color: $desaturated-red;
-  padding: 3rem 0;
+  footer {
+    grid-area: footer;
+    text-align: center;
+    @include mainFont(300, 1.25rem);
+    color: $desaturated-red;
+    padding-bottom: 3rem;
+
+    a {
+      color: $soft-red;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .hidden {
   display: none;
+}
+
+@media all and (min-width: $breakpoint-medium) {
+  .wrapper {
+    display: grid;
+    background: url(/images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 66% 100%;
+    grid-template-columns: 60% 40%;
+    grid-template-areas:
+      'header   hero'
+      'main     hero'
+      'main     hero'
+      'footer   hero';
+
+    header {
+      height: 17vw;
+      max-height: 200px;
+
+      .logo {
+        padding-left: 15rem;
+
+        img {
+          width: 15vw;
+          max-width: 150px;
+        }
+      }
+    }
+
+    .hero {
+      height: 100vh;
+
+      .hero-desktop {
+        display: block;
+        height: 100%;
+      }
+
+      .hero-mobile {
+        display: none;
+      }
+    }
+
+    main {
+      text-align: left;
+      padding: 0 15rem;
+
+      .coming-soon {
+        font-size: 3rem;
+        letter-spacing: 1.75rem;
+        padding: 0;
+
+        .coming-soon-highlight {
+          font-weight: 300;
+        }
+      }
+
+      .body-copy {
+        font-size: 1.5rem;
+        color: $desaturated-red;
+        line-height: 2.5rem;
+      }
+      .email-form {
+        margin: 3rem 0 0 0;
+      }
+
+      footer {
+        text-align: left;
+        padding: 0 15rem;
+        font-size: 0.75rem;
+        line-height: 1.5rem;
+        opacity: 0.8;
+      }
+    }
+  }
 }

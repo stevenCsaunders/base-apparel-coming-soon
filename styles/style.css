@@ -1,18 +1,18 @@
 body {
   height: 100%;
+  background: linear-gradient(135deg, white, #ffebeb);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .wrapper {
-  background: linear-gradient(135deg, white, #ffebeb);
-  background-size: cover;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  height: 100%;
       grid-template-areas: 'header' 'hero' 'main' 'footer';
 }
 
-header {
+.wrapper header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
@@ -21,44 +21,43 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 17vw;
+  height: 14vw;
   max-height: 100px;
 }
 
-header .logo {
+.wrapper header .logo {
   padding-left: 3rem;
 }
 
-header .logo img {
+.wrapper header .logo img {
   width: 25vw;
   max-width: 150px;
 }
 
-.hero {
+.wrapper .hero {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: hero;
 }
 
-.hero .hero-desktop {
+.wrapper .hero .hero-desktop {
   display: none;
 }
 
-.hero .hero-mobile {
-  width: 100vw;
+.wrapper .hero .hero-mobile {
+  width: 100%;
 }
 
-main {
+.wrapper main {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: main;
   margin: 0 auto;
   text-align: center;
-  padding: 0 3rem;
-  max-width: 600px;
+  padding: 0 4rem;
 }
 
-main .coming-soon {
+.wrapper main .coming-soon {
   padding: 6rem 0 0 0;
   color: #413a3a;
   font-family: 'Josefin Sans', sans-serif;
@@ -69,21 +68,25 @@ main .coming-soon {
   letter-spacing: 1rem;
 }
 
-main .coming-soon .coming-soon-highlight {
+.wrapper main .coming-soon .coming-soon-highlight {
   font-weight: 300;
   color: #ce9797;
 }
 
-main .body-copy {
+.wrapper main .body-copy {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   color: #413a3a;
   color: #ce9797;
-  line-height: 2rem;
+  line-height: 2.25rem;
 }
 
-main .email-form form {
+.wrapper main .email-form {
+  margin: 3rem 0;
+}
+
+.wrapper main .email-form form {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,10 +94,9 @@ main .email-form form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 1rem;
 }
 
-main .email-form form input {
+.wrapper main .email-form form input {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   border: 1px solid #ce9797;
@@ -103,7 +105,7 @@ main .email-form form input {
   width: 100%;
 }
 
-main .email-form form input::-webkit-input-placeholder {
+.wrapper main .email-form form input::-webkit-input-placeholder {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
@@ -111,7 +113,7 @@ main .email-form form input::-webkit-input-placeholder {
   color: #ce9797;
 }
 
-main .email-form form input:-ms-input-placeholder {
+.wrapper main .email-form form input:-ms-input-placeholder {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
@@ -119,7 +121,7 @@ main .email-form form input:-ms-input-placeholder {
   color: #ce9797;
 }
 
-main .email-form form input::-ms-input-placeholder {
+.wrapper main .email-form form input::-ms-input-placeholder {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
@@ -127,7 +129,7 @@ main .email-form form input::-ms-input-placeholder {
   color: #ce9797;
 }
 
-main .email-form form input::placeholder {
+.wrapper main .email-form form input::placeholder {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
@@ -135,11 +137,15 @@ main .email-form form input::placeholder {
   color: #ce9797;
 }
 
-main .email-form form label {
+.wrapper main .email-form form label {
   display: none;
 }
 
-main .email-form form button {
+.wrapper main .email-form form button {
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
   position: absolute;
   right: 0;
   display: -webkit-box;
@@ -160,22 +166,22 @@ main .email-form form button {
           box-shadow: 0px 0.75rem 0.95rem rgba(249, 98, 98, 0.2);
 }
 
-main .email-form form button:hover {
+.wrapper main .email-form form button:hover {
   -webkit-box-shadow: 0px 0.75rem 0.95rem rgba(65, 58, 58, 0.2);
           box-shadow: 0px 0.75rem 0.95rem rgba(65, 58, 58, 0.2);
   cursor: pointer;
 }
 
-main .email-form form button img {
+.wrapper main .email-form form button img {
   max-height: 1.5rem;
 }
 
-main .email-form form .email-reject-img {
+.wrapper main .email-form form .email-reject-img {
   position: absolute;
   right: 7.5rem;
 }
 
-main .email-form .email-reject-text p {
+.wrapper main .email-form .email-reject-text p {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.25rem;
   font-weight: 300;
@@ -185,15 +191,15 @@ main .email-form .email-reject-text p {
   color: #f96262;
 }
 
-main .email-form .red-border {
+.wrapper main .email-form .red-border {
   border-color: #f96262;
 }
 
-main .email-form .green-border {
+.wrapper main .email-form .green-border {
   border-color: lightgreen;
 }
 
-footer {
+.wrapper footer {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: footer;
@@ -203,10 +209,80 @@ footer {
   font-weight: 300;
   color: #413a3a;
   color: #ce9797;
-  padding: 3rem 0;
+  padding-bottom: 3rem;
+}
+
+.wrapper footer a {
+  color: #f96262;
+  text-decoration: none;
+}
+
+.wrapper footer a:hover {
+  text-decoration: underline;
 }
 
 .hidden {
   display: none;
+}
+
+@media all and (min-width: 1024px) {
+  .wrapper {
+    display: -ms-grid;
+    display: grid;
+    background: url(/images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 66% 100%;
+    -ms-grid-columns: 60% 40%;
+        grid-template-columns: 60% 40%;
+        grid-template-areas: 'header   hero' 'main     hero' 'main     hero' 'footer   hero';
+  }
+  .wrapper header {
+    height: 17vw;
+    max-height: 200px;
+  }
+  .wrapper header .logo {
+    padding-left: 15rem;
+  }
+  .wrapper header .logo img {
+    width: 15vw;
+    max-width: 150px;
+  }
+  .wrapper .hero {
+    height: 100vh;
+  }
+  .wrapper .hero .hero-desktop {
+    display: block;
+    height: 100%;
+  }
+  .wrapper .hero .hero-mobile {
+    display: none;
+  }
+  .wrapper main {
+    text-align: left;
+    padding: 0 15rem;
+  }
+  .wrapper main .coming-soon {
+    font-size: 3rem;
+    letter-spacing: 1.75rem;
+    padding: 0;
+  }
+  .wrapper main .coming-soon .coming-soon-highlight {
+    font-weight: 300;
+  }
+  .wrapper main .body-copy {
+    font-size: 1.5rem;
+    color: #ce9797;
+    line-height: 2.5rem;
+  }
+  .wrapper main .email-form {
+    margin: 3rem 0 0 0;
+  }
+  .wrapper main footer {
+    text-align: left;
+    padding: 0 15rem;
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    opacity: 0.8;
+  }
 }
 /*# sourceMappingURL=style.css.map */
