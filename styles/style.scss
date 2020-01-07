@@ -117,7 +117,7 @@ body {
 
         .email-reject-img {
           position: absolute;
-          right: 7.5rem;
+          right: 10.5rem;
         }
       }
       .email-reject-text p {
@@ -161,8 +161,6 @@ body {
 
 @media all and (min-width: $breakpoint-medium) {
   .wrapper {
-    overflow: hidden;
-    display: grid;
     background: url(/images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
     background-size: 66% 100%;
@@ -189,7 +187,6 @@ body {
 
     .hero {
       height: 100vh;
-
       .hero-desktop {
         display: block;
         height: 100%;
