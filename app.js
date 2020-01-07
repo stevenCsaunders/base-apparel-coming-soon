@@ -1,9 +1,9 @@
 const form = document.querySelector(`form`);
-const emailInput = document.querySelector(`input`);
-const errorMessage = document.querySelector(`#email-validate`);
-const errorImg = document.querySelector(`#email-reject`);
+const emailInput = document.querySelector(`#email`);
+const errorMessage = document.querySelector(`#email-reject-text`);
+const errorImg = document.querySelector(`#email-reject-img`);
 
-const setErrorFor = () => {
+const setError = () => {
 	emailInput.classList.add(`red-border`);
 	emailInput.classList.remove(`green-border`);
 	errorMessage.classList.remove(`hidden`);
@@ -25,7 +25,7 @@ form.addEventListener(`submit`, (e) => {
 function checkEmail() {
 	const emailValue = emailInput.value.trim();
 	if (emailValue === '' || !validateEmail(emailValue)) {
-		setErrorFor();
+		setError();
 	} else if (validateEmail(emailValue)) {
 		setSuccess();
 	}

@@ -95,6 +95,8 @@ main .email-form form {
 }
 
 main .email-form form input {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   border: 1px solid #ce9797;
   border-radius: 2rem;
   padding: 1.5rem 1rem 1.5rem 2.5rem;
@@ -173,19 +175,38 @@ main .email-form form .email-reject-img {
   right: 7.5rem;
 }
 
-main .email-form form .hidden {
-  display: none;
-}
-
 main .email-form .email-reject-text p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #413a3a;
   text-align: left;
   margin-left: 2.5rem;
+  color: #f96262;
 }
 
-main footer {
+main .email-form .red-border {
+  border-color: #f96262;
+}
+
+main .email-form .green-border {
+  border-color: lightgreen;
+}
+
+footer {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: footer;
   text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #413a3a;
+  color: #ce9797;
+  padding: 3rem 0;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

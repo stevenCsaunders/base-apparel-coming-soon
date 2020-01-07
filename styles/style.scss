@@ -75,6 +75,7 @@ main {
       align-items: center;
       margin-bottom: 1rem;
       input {
+        transition: all 0.5s;
         border: 1px solid $desaturated-red;
         border-radius: 2rem;
         padding: 1.5rem 1rem 1.5rem 2.5rem;
@@ -113,19 +114,32 @@ main {
         position: absolute;
         right: 7.5rem;
       }
-
-      .hidden {
-        display: none;
-      }
     }
     .email-reject-text p {
+      @include mainFont(300, 1.25rem);
       text-align: left;
       margin-left: 2.5rem;
+      color: $soft-red;
+    }
+
+    .red-border {
+      border-color: $soft-red;
+    }
+
+    .green-border {
+      border-color: lightgreen;
     }
   }
+}
 
-  footer {
-    grid-area: footer;
-    text-align: center;
-  }
+footer {
+  grid-area: footer;
+  text-align: center;
+  @include mainFont(300, 1.25rem);
+  color: $desaturated-red;
+  padding: 3rem 0;
+}
+
+.hidden {
+  display: none;
 }
