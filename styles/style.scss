@@ -184,10 +184,10 @@ body {
     }
 
     .hero {
-      height: 100vh;
+          height: 100vh;
+      overflow: hidden;
       .hero-desktop {
         display: block;
-        height: 100%;
       }
 
       .hero-mobile {
