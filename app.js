@@ -2,8 +2,10 @@ const form = document.querySelector(`form`);
 const emailInput = document.querySelector(`#email`);
 const errorMessage = document.querySelector(`#email-reject-text`);
 const errorImg = document.querySelector(`#email-reject-img`);
-const imageToggle = document.querySelector(`#hero-img`);
-const windowWidth = window.innerWidth;
+const heroImage = document.querySelector(`#hero-img`);
+
+window.onload = swapImage();
+window.addEventListener(`resize`, swapImage);
 
 const setError = () => {
 	emailInput.classList.add(`red-border`);
@@ -22,7 +24,6 @@ form.addEventListener(`submit`, (e) => {
 	checkEmail();
 })
 
-window.addEventListener(`resize`, swapImage());
 
 function checkEmail() {
 	const emailValue = emailInput.value.trim();
@@ -39,9 +40,14 @@ function validateEmail(email) {
 }
 
 function swapImage() {
-	if(windowWidth >= 750) {
-		imageToggle.
-	}	else {
+	const windowWidth = window.innerWidth;
 
+	if(windowWidth >= 750) {
+		console.log(`success`);
+		heroImage.setAttribute(`src`, `/images/hero-desktop.jpg`);
+	}	else {
+		heroImage.setAttribute(`src`, `/images/hero-mobile.jpg`);
 	}
 }
+
+

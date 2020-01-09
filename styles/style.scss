@@ -20,6 +20,7 @@ body {
 }
 
 .wrapper {
+  height: 100vh;
   display: grid;
   grid-template-columns: 57.5% 42.5%;
   grid-template-areas:
@@ -42,20 +43,22 @@ body {
 
   .hero {
     grid-area: hero;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   main {
     grid-area: main;
     padding: 0 15rem;
-    max-width: 75rem;
+    max-width: 100rem;
     @include mainFont(400, 1rem);
 
     .coming-soon {
       text-transform: uppercase;
-      font-size: 3rem;
+      font-size: 3vw;
       letter-spacing: 1.5rem;
       line-height: 1;
 
@@ -128,6 +131,7 @@ body {
           border: 1px solid $soft-red;
         }
       }
+
       .email-reject-text p {
         padding-left: 1.5rem;
         @include mainFont(400, 1rem);
@@ -143,12 +147,18 @@ body {
   footer {
     grid-area: footer;
     color: $desaturated-red;
-    padding: 0 3rem;
-    .link a {
-      text-decoration: none;
-      &:hover {
-        color: $soft-red;
-        text-decoration: underline;
+    padding: 0 15rem;
+
+    .attribution {
+      a {
+        color: $desaturated-red;
+        text-decoration: none;
+
+        &:hover {
+          color: $soft-red;
+          text-decoration: underline;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -159,9 +169,11 @@ body {
     background: $light-gradient;
     background-size: cover;
   }
+
   .wrapper {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 10rem auto auto auto;
     grid-template-areas:
       'header'
       'hero'
@@ -169,29 +181,16 @@ body {
       'footer';
 
     header {
-      grid-area: header;
       display: grid;
       align-items: center;
-      max-height: 10rem;
-      padding: 0 3rem;
-      img {
-        width: 25vw;
-        min-width: 125px;
-      }
-    }
-
-    .hero {
-      grid-area: hero;
-      height: auto;
-      img {
-        width: 100vw;
-      }
+      height: unset;
+      padding: 0 4rem;
     }
 
     main {
       grid-area: main;
       text-align: center;
-      padding: 5rem 3rem;
+      padding: 5rem 4rem;
       @include mainFont(400, 1rem);
 
       .coming-soon {
@@ -208,6 +207,8 @@ body {
     }
     footer {
       text-align: center;
+      margin: 0;
+      padding: 0 4rem;
     }
   }
 }
