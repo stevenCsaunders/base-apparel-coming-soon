@@ -210,7 +210,6 @@ body {
 @media all and (max-width: 750px) {
   body {
     background: linear-gradient(135deg, white, #ffebeb);
-    background-size: cover;
   }
   .wrapper {
     display: -ms-grid;
