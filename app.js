@@ -43,7 +43,6 @@ function swapImage() {
 	const windowWidth = window.innerWidth;
 
 	if(windowWidth >= 750) {
-		console.log(`success`);
 		heroImage.setAttribute(`src`, `/images/hero-desktop.jpg`);
 	}	else {
 		heroImage.setAttribute(`src`, `/images/hero-mobile.jpg`);
