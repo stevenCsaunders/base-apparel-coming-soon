@@ -1,25 +1,10 @@
-@import './variables';
+@import './generic'
+@import './settings'
+@import './tools'
 
-@mixin mainFont($weight, $size) {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: $size;
-  font-weight: $weight;
-  color: $dark-grayish-red;
-}
 
-* {
-  box-sizing: border-box;
-}
 
-body {
-  width: 100%;
-  height: 100vh;
-  background-image: url(/images/bg-pattern-desktop.svg);
-  background-size: 60% 100%;
-  line-height: 1.4;
-}
-
-.wrapper {
+.wrapper 
   height: 100vh;
   display: grid;
   grid-template-columns: 57.5% 42.5%;
@@ -28,59 +13,35 @@ body {
     'main   hero'
     'main   hero'
     'footer hero';
-}
 
-header {
-  grid-area: header;
-  display: grid;
-  align-items: center;
-  height: 20rem;
-  padding: 0 15rem;
-  img {
-    width: 25vw;
-    max-width: 175px;
-  }
-}
-
-.hero {
+.hero 
   grid-area: hero;
-  img {
+  img 
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-}
 
-main {
-  grid-area: main;
-  padding: 0 15rem;
-  max-width: 100rem;
-  @include mainFont(400, 1rem);
-}
-.coming-soon {
+.coming-soon 
   text-transform: uppercase;
   font-size: 3vw;
   letter-spacing: 1.5rem;
   line-height: 1;
-}
 
-.body-copy {
+.body-copy 
   color: $desaturated-red;
   font-size: 1.5rem;
   padding: 2rem 0;
-}
 
-.email-form {
+.email-form 
   margin: 0;
   padding: 0;
-}
 
-form {
+form 
   display: flex;
   align-items: center;
   position: relative;
 
-  input {
+  input 
     width: 100%;
     padding: 1.5rem;
     border: 1px solid $desaturated-red;
@@ -88,18 +49,18 @@ form {
     font-size: 1.5rem;
     font-weight: 300;
 
-    &::placeholder {
+    &::placeholder 
       color: $desaturated-red;
       font-size: 1.5rem;
       font-weight: 300;
-    }
-  }
+    
+  
 
-  label {
+  label 
     display: none;
-  }
+  
 
-  button {
+  button 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,57 +74,48 @@ form {
     position: absolute;
     right: 0;
 
-    &:hover {
+    &:hover 
       box-shadow: 0px 5px 7px $dark-grayish-transparent;
       cursor: pointer;
-    }
-  }
-}
+    
+  
 
-.email-reject-img {
+
+.email-reject-img 
   position: absolute;
   right: 10rem;
-}
 
-.red-border {
+
+.red-border 
   border: 1px solid $soft-red;
-}
 
-.email-reject-text p {
+
+.email-reject-text p 
   padding-left: 1.5rem;
   @include mainFont(400, 1rem);
   color: $soft-red;
-}
 
-.hidden {
+
+.hidden 
   visibility: hidden;
-}
 
-footer {
-  grid-area: footer;
-  color: $desaturated-red;
-  padding: 0 15rem;
+.attribution 
+  a 
+    color: $desaturated-red;
+    text-decoration: none;
 
-  .attribution {
-    a {
-      color: $desaturated-red;
-      text-decoration: none;
+    &:hover 
+      color: $soft-red;
+      text-decoration: underline;
+      cursor: pointer;
+      
 
-      &:hover {
-        color: $soft-red;
-        text-decoration: underline;
-        cursor: pointer;
-      }
-    }
-  }
-}
-
-@media all and (max-width: $breakpoint-small) {
-  body {
+@media all and (max-width: $breakpoint-small) 
+  body 
     background: $light-gradient;
-  }
+  
 
-  .wrapper {
+  .wrapper 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 10rem auto auto auto;
@@ -172,37 +124,36 @@ footer {
       'hero'
       'main'
       'footer';
-  }
-
-  header {
+  
+  header 
     display: grid;
     align-items: center;
     height: unset;
     padding: 0 4rem;
-  }
+  
 
-  main {
+  main 
     grid-area: main;
     text-align: center;
     padding: 5rem 4rem;
     @include mainFont(400, 1rem);
-  }
+  
 
-  .coming-soon {
+  .coming-soon 
     font-size: 2rem;
     letter-spacing: 1.25rem;
     line-height: 1;
-  }
+  
 
-  .body-copy {
+  .body-copy 
     color: $desaturated-red;
     font-size: 1.5rem;
     padding: 1.5rem 0;
-  }
+  
 
-  footer {
+  footer 
     text-align: center;
     margin: 0;
     padding: 0 4rem;
-  }
-}
+  
+
