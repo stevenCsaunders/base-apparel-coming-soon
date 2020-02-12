@@ -191,7 +191,6 @@ header img {
 main {
   grid-area: main;
   padding: 0 15rem;
-  max-width: 100rem;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -207,7 +206,7 @@ form input {
   width: 100%;
   padding: 1.5rem;
   border: 1px solid #ce9797;
-  border-radius: 2.1rem;
+  border-radius: 2.25rem;
   font-size: 1.5rem;
   font-weight: 300;
 }
@@ -224,17 +223,17 @@ form button {
   align-items: center;
   justify-content: center;
   width: 7.5rem;
-  height: 4.75rem;
+  height: 4.9rem;
   border: none;
-  border-radius: 2.1rem;
+  border-radius: 2.2rem;
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
-  box-shadow: 0px 5px 7px rgba(249, 98, 98, 0.3);
+  box-shadow: 0px 5px 7px rgba(249, 98, 98, 0.5);
   transition: box-shadow 0.5s;
   position: absolute;
   right: 0;
 }
 form button:hover {
-  box-shadow: 0px 5px 7px rgba(65, 58, 58, 0.3);
+  box-shadow: 0px 5px 7px rgba(65, 58, 58, 0.5);
   cursor: pointer;
 }
 
@@ -271,6 +270,10 @@ footer {
     margin: 0;
     padding: 0 4rem;
   }
+
+  body {
+    background-size: contain;
+  }
 }
 .wrapper {
   height: 100vh;
@@ -290,7 +293,7 @@ footer {
 
 .coming-soon {
   text-transform: uppercase;
-  font-size: 3vw;
+  font-size: 2.75vw;
   letter-spacing: 1.5rem;
   line-height: 1;
 }
@@ -338,7 +341,7 @@ footer {
 }
 @media (min-width: 1200px) {
   .wrapper {
-    max-width: 1600px;
+    max-width: 1500px;
   }
 
   .coming-soon {

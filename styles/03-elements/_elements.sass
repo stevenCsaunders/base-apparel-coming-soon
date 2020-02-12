@@ -24,7 +24,6 @@ header
 main
   grid-area: main
   padding: 0 15rem
-  max-width: 100rem
   @include mainFont(400, 1rem)
 
 form
@@ -36,7 +35,7 @@ form
     width: 100%
     padding: 1.5rem
     border: 1px solid $desaturated-red
-    border-radius: 2.1rem
+    border-radius: 2.25rem
     font-size: 1.5rem
     font-weight: 300
     &::placeholder
@@ -52,16 +51,16 @@ form
     align-items: center
     justify-content: center
     width: 7.5rem
-    height: 4.75rem
+    height: 4.9rem
     border: none
-    border-radius: 2.1rem
+    border-radius: 2.2rem
     background: $dark-gradient
-    box-shadow: 0px 5px 7px $soft-red-transparent
+    box-shadow: 0px 5px 7px hsla(0, 93%, 68%, 0.5)
     transition: box-shadow 0.5s
     position: absolute
     right: 0
     &:hover
-      box-shadow: 0px 5px 7px $dark-grayish-transparent
+      box-shadow: 0px 5px 7px hsla(0, 6%, 24%, 0.5)
       cursor: pointer
 
 footer
@@ -89,3 +88,7 @@ footer
     text-align: center
     margin: 0
     padding: 0 4rem
+
+  @include desktop-up
+  body
+    background-size: contain
