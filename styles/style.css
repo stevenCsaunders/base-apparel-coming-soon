@@ -170,6 +170,7 @@ body {
   height: 100vh;
   background-image: url(../../images/bg-pattern-desktop.svg);
   background-size: cover;
+  background-repeat: none;
   line-height: 1.4;
   display: grid;
   justify-content: center;
@@ -266,10 +267,6 @@ footer {
     margin: 0;
     padding: 0 4rem;
   }
-
-  body {
-    background-size: contain;
-  }
 }
 .wrapper {
   height: 100vh;
@@ -292,6 +289,11 @@ footer {
   font-size: 2.75vw;
   letter-spacing: 1.5rem;
   line-height: 1;
+}
+
+.coming-soon-highlight {
+  font-weight: 200;
+  color: #ce9797;
 }
 
 .body-copy {
