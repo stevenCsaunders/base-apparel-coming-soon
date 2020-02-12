@@ -244,10 +244,6 @@ footer {
 }
 
 @media (max-width: 899px) {
-  body {
-    background: linear-gradient(135deg, white, #ffebeb);
-  }
-
   header {
     display: grid;
     align-items: center;
