@@ -169,8 +169,10 @@ body {
   width: 100%;
   height: 100vh;
   background-image: url(../../images/bg-pattern-desktop.svg);
-  background-size: 60% 100%;
+  background-size: cover;
   line-height: 1.4;
+  display: grid;
+  justify-content: center;
 }
 
 header {
@@ -183,6 +185,7 @@ header {
 header img {
   width: 25vw;
   max-width: 175px;
+  min-width: 120px;
 }
 
 main {
@@ -241,7 +244,7 @@ footer {
   padding: 0 15rem;
 }
 
-@media all and (max-width: 750px) {
+@media (max-width: 899px) {
   body {
     background: linear-gradient(135deg, white, #ffebeb);
   }
@@ -250,7 +253,7 @@ footer {
     display: grid;
     align-items: center;
     height: unset;
-    padding: 0 4rem;
+    padding: 0 10%;
   }
 
   main {
@@ -303,7 +306,7 @@ footer {
   padding: 0;
 }
 
-@media all and (max-width: 750px) {
+@media (max-width: 899px) {
   .wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -331,6 +334,15 @@ footer {
     color: #f96262;
     text-decoration: underline;
     cursor: pointer;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    max-width: 1600px;
+  }
+
+  .coming-soon {
+    font-size: 3.5rem;
   }
 }
 .hidden {

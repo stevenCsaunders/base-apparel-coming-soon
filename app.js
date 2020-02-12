@@ -42,7 +42,7 @@ function validateEmail(email) {
 function swapImage() {
 	const windowWidth = window.innerWidth;
 
-	if(windowWidth >= 750) {
+	if(windowWidth >= 899) {
 		heroImage.setAttribute(`src`, `/images/hero-desktop.jpg`);
 	}	else {
 		heroImage.setAttribute(`src`, `/images/hero-mobile.jpg`);

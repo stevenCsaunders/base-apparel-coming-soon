@@ -3,3 +3,15 @@
   font-size: $size
   font-weight: $weight
   color: $dark-grayish-red
+
+@mixin tablet-portrait-down
+  @media (max-width: 899px)
+    @content
+
+@mixin tablet-landscape-up
+  @media (min-width: 900px)
+    @content
+
+@mixin desktop-up
+  @media (min-width: 1200px)
+    @content
